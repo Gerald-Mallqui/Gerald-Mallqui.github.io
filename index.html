@@ -82,6 +82,7 @@
 
       (async () => {
           console.log("Cargando modelo...");
+          tf.serialization.registerClass(KerasLayer);
           modelo = await tf.loadLayersModel("model.json");
           console.log("Modelo cargado...");
       })();
